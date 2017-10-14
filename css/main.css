@@ -1,3 +1,14 @@
 body {
     font-family: 'Josefin Slab', serif, 'Electrolize', sans-serif;
+	margin: 1vh 5vh;
+}
+
+.contact img {
+	width: 60px;
+	display: block;
+	margin: auto;
+}
+
+.contact p {
+	text-align: center;
 }
