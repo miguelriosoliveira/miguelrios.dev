@@ -3,12 +3,20 @@ body {
 	margin: 1vh 5vh;
 }
 
-.contact img {
+section {
+	border: 1px dotted black;
+}
+
+#contact img {
 	width: 60px;
 	display: block;
 	margin: auto;
 }
 
-.contact p {
+#contact p {
 	text-align: center;
+}
+
+#activities {
+	margin: 2vh 0;
 }
