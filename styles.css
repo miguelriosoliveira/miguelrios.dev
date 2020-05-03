@@ -13,7 +13,7 @@ body {
   font-size: 14px;
   color: white;
 
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), black), url(../assets/me.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), black), url(./assets/me.jpg);
   background-color: rgba(0, 0, 0, 0.8);
   background-blend-mode: color;
   background-position: center;
