@@ -1,0 +1,60 @@
+{
+	"env": {
+		"browser": true,
+		"es6": true
+	},
+	"extends": [
+		"plugin:react/recommended",
+		"airbnb",
+		"plugin:@typescript-eslint/recommended",
+		"plugin:prettier/recommended"
+	],
+	"globals": {
+		"Atomics": "readonly",
+		"SharedArrayBuffer": "readonly"
+	},
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"ecmaFeatures": {
+			"jsx": true
+		},
+		"ecmaVersion": 2018,
+		"sourceType": "module"
+	},
+	"plugins": [
+		"react",
+		"react-hooks",
+		"@typescript-eslint",
+		"eslint-plugin-import-helpers",
+		"prettier"
+	],
+	"rules": {
+		"no-tabs": ["error", { "allowIndentationTabs": true }],
+		"indent": ["error", "tab"],
+		"import-helpers/order-imports": [
+			"warn",
+			{
+				"newlinesBetween": "always",
+				"groups": ["module", "parent", "sibling", "index"],
+				"alphabetize": { "order": "asc", "ignoreCase": true }
+			}
+		],
+		"import/extensions": ["error", "ignorePackages", { "ts": "never", "tsx": "never" }],
+		"import/prefer-default-export": "off",
+		"react-hooks/exhaustive-deps": "warn",
+		"react-hooks/rules-of-hooks": "error",
+		"react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
+		"react/jsx-indent": [
+			"warn",
+			"tab",
+			{ "checkAttributes": true, "indentLogicalExpressions": true }
+		],
+		"react/jsx-indent-props": ["warn", "tab"],
+		"react/prop-types": "off"
+	},
+	"settings": {
+		"import/resolver": {
+			"typescript": {}
+		}
+	}
+}
