@@ -14,6 +14,7 @@ export default createGlobalStyle`
 		height: 100vh;
 		width: 100vw;
 
+		padding: 10px 30px 30px 30px;
 		font-family: Poppins, sans-serif;
 		font-size: 14px;
 		color: #fff;
@@ -26,6 +27,8 @@ export default createGlobalStyle`
 
 		#root {
 			height: 100%;
+			display: flex;
+			flex-direction: column;
 		}
 	}
 

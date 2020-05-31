@@ -14,7 +14,7 @@ import IconLink from '../../components/IconLink';
 import { Main } from './styles';
 
 const roles = [
-	'developer',
+	'developer 👨‍💻',
 	'dependent on inspiration 👓',
 	'gaming enthusiast 🎮',
 	'code maker 💻',
