@@ -30,7 +30,8 @@
 	],
 	"rules": {
 		"no-tabs": ["error", { "allowIndentationTabs": true }],
-		"indent": ["error", "tab"],
+		// "indent": ["error", "tab"],
+		"@typescript-eslint/explicit-function-return-type": ["error", { "allowExpressions": true }],
 		"import-helpers/order-imports": [
 			"warn",
 			{
@@ -41,6 +42,7 @@
 		],
 		"import/extensions": ["error", "ignorePackages", { "ts": "never", "tsx": "never" }],
 		"import/prefer-default-export": "off",
+		"prettier/prettier": "error",
 		"react-hooks/exhaustive-deps": "warn",
 		"react-hooks/rules-of-hooks": "error",
 		"react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
