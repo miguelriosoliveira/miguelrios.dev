@@ -19,7 +19,7 @@ export const LinkStyles = styled.div<LinkProps>`
 			height: 1px;
 			display: block;
 			background: #fff;
-			transition: 300ms;
+			transition: width 0.3s;
 
 			${({ selected }) =>
 				selected &&
