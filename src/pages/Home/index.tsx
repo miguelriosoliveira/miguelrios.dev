@@ -11,7 +11,7 @@ import Typing from 'react-typing-animation';
 
 import IconLink from '../../components/IconLink';
 
-import { Main } from './styles';
+import { Container } from './styles';
 
 const roles = [
 	'developer 👨‍💻',
@@ -31,7 +31,7 @@ const links = [
 ];
 
 export const Home: React.FC = () => (
-	<Main>
+	<Container>
 		<section className="languages">
 			{/* <a href="#">ENG</a> */}
 			{/* <a href="#">PTBR</a> */}
@@ -58,7 +58,7 @@ export const Home: React.FC = () => (
 				<IconLink key={to} icon={icon} to={to} />
 			))}
 		</section>
-	</Main>
+	</Container>
 );
 
 export default Home;

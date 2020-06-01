@@ -27,8 +27,15 @@ export default createGlobalStyle`
 
 		#root {
 			height: 100%;
+			max-width: 1100px;
+			margin: auto;
 			display: flex;
 			flex-direction: column;
+
+			> main {
+				display: flex;
+				flex: 1;
+			}
 		}
 	}
 
