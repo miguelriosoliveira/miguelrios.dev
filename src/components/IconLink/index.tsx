@@ -1,4 +1,4 @@
-import React from 'react';
+import { StyledAnchor } from './styles';
 
 interface Props {
 	icon: React.ElementType;
@@ -6,9 +6,9 @@ interface Props {
 }
 
 const IconLink: React.FC<Props> = ({ icon: Icon, to }) => (
-	<a href={to} target="_blank" rel="noopener noreferrer">
+	<StyledAnchor href={to} target="_blank" rel="noopener noreferrer">
 		<Icon size={30} />
-	</a>
+	</StyledAnchor>
 );
 
 export default IconLink;

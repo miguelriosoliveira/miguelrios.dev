@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
-import meBackground from '../assets/me.png';
+import me from '../assets/me.png';
 
 export default createGlobalStyle`
 	* {
@@ -11,21 +11,21 @@ export default createGlobalStyle`
 	}
 
 	body {
-		height: 100vh;
 		width: 100vw;
+		height: 100vh;
 
-		padding: 10px 30px 30px 30px;
-		font-family: Poppins, sans-serif;
-		font-size: 14px;
-		color: #fff;
+		padding: 16px 30px 30px 30px;
 
-		background-image: url(${meBackground});
-		background-color: #141414;
+		background: ${props => props.theme.colors.background};
+		background-image: url(${me});
 		background-position: center;
 		background-repeat: no-repeat;
-		background-size: contain;
+		background-size: cover;
+		background-attachment: fixed;
+		color: ${props => props.theme.colors.text};
+		font: 400 14px Poppins, sans-serif;
 
-		#root {
+		#__next {
 			height: 100%;
 			max-width: 1100px;
 			margin: auto;
@@ -36,6 +36,10 @@ export default createGlobalStyle`
 				display: flex;
 				flex: 1;
 			}
+		}
+
+		@media (min-width: 768px) {
+			background-size: contain;
 		}
 	}
 

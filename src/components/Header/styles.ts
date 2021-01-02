@@ -1,35 +1,13 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
-export const HeaderStyles = styled.header`
+export const StyledHeader = styled.header`
 	display: grid;
 	grid-auto-flow: column;
 	justify-content: end;
 	gap: 10px;
-`;
+	font-size: 1.2rem;
 
-interface LinkProps {
-	selected?: boolean;
-}
-
-export const LinkStyles = styled.div<LinkProps>`
-	a {
-		:after {
-			content: '';
-			width: 0px;
-			height: 1px;
-			display: block;
-			background: #fff;
-			transition: width 0.3s;
-
-			${({ selected }) =>
-				selected &&
-				css`
-					width: 100%;
-				`}
-		}
-
-		:hover:after {
-			width: 100%;
-		}
+	@media (min-width: 768px) {
+		font-size: initial;
 	}
 `;
