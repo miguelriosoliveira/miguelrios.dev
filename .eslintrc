@@ -1,62 +1,59 @@
 {
 	"env": {
 		"browser": true,
-		"es6": true
+		"es2021": true,
+		"node": true
 	},
 	"extends": [
 		"plugin:react/recommended",
 		"airbnb",
 		"plugin:@typescript-eslint/recommended",
-		"plugin:prettier/recommended"
+		"plugin:prettier/recommended",
+		"prettier/@typescript-eslint",
+		"prettier/react"
 	],
-	"globals": {
-		"Atomics": "readonly",
-		"SharedArrayBuffer": "readonly"
-	},
 	"parser": "@typescript-eslint/parser",
 	"parserOptions": {
 		"ecmaFeatures": {
 			"jsx": true
 		},
-		"ecmaVersion": 2018,
+		"ecmaVersion": 12,
 		"sourceType": "module"
 	},
-	"plugins": [
-		"react",
-		"react-hooks",
-		"@typescript-eslint",
-		"eslint-plugin-import-helpers",
-		"prettier"
-	],
+	"plugins": ["react", "@typescript-eslint", "eslint-plugin-import-helpers", "prettier"],
+	"settings": {
+		"import/resolver": {
+			"node": {
+				"extensions": [".js", ".jsx", ".ts", ".tsx"]
+			}
+		}
+	},
 	"rules": {
-		"no-tabs": ["error", { "allowIndentationTabs": true }],
-		// "indent": ["error", "tab"],
-		"@typescript-eslint/explicit-function-return-type": ["error", { "allowExpressions": true }],
+		"camelcase": "off",
+
+		"import/extensions": ["warn", { ".ts": "never", ".tsx": "never" }],
+		"import/prefer-default-export": "off",
+
 		"import-helpers/order-imports": [
-			"warn",
+			"error",
 			{
 				"newlinesBetween": "always",
 				"groups": ["module", "parent", "sibling", "index"],
 				"alphabetize": { "order": "asc", "ignoreCase": true }
 			}
 		],
-		"import/extensions": ["error", "ignorePackages", { "ts": "never", "tsx": "never" }],
-		"import/prefer-default-export": "off",
+
 		"prettier/prettier": "error",
-		"react-hooks/exhaustive-deps": "warn",
-		"react-hooks/rules-of-hooks": "error",
-		"react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
+
+		"react/jsx-filename-extension": [1, { "extensions": [".ts", ".tsx"] }],
 		"react/jsx-indent": [
 			"warn",
 			"tab",
 			{ "checkAttributes": true, "indentLogicalExpressions": true }
 		],
 		"react/jsx-indent-props": ["warn", "tab"],
-		"react/prop-types": "off"
-	},
-	"settings": {
-		"import/resolver": {
-			"typescript": {}
-		}
+		"react/jsx-props-no-spreading": "off",
+		"react/prop-types": "off",
+		"react/react-in-jsx-scope": "off"
 	}
 }
