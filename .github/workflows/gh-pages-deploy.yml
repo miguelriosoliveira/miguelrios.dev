@@ -1,7 +1,7 @@
 # This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-name: gh-pages CI
+name: gh-pages deploy
 
 on:
   push:
@@ -24,9 +24,9 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: npm ci
-    - run: npm run build
-    - run: npm run export
+    - run: yarn install --frozen-lockfile
+    - run: yarn build
+    - run: yarn export
 
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@3.7.1
