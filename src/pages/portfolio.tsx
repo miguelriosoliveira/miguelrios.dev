@@ -18,7 +18,7 @@ const Portfolio: React.FC = () => {
 						<ProjectCard
 							name="Reactdex"
 							imgSrc={reactdexImg}
-							link="http://www.reactdex.com/"
+							link="https://project-pokedex.vercel.app/"
 							techs={['ReactJS', 'Node.js', 'MongoDB', 'PokéAPI']}
 						/>
 					</li>
