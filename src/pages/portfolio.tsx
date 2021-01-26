@@ -1,7 +1,7 @@
 import Head from 'next/head';
 
 import projectNetflixImg from '../assets/project_netflix.png';
-import reactdexImg from '../assets/reactdex.png';
+import projectPokedexImg from '../assets/project_pokedex.png';
 import ProjectCard from '../components/ProjectCard';
 import { Container } from '../styles/pages/Portfolio';
 
@@ -16,8 +16,8 @@ const Portfolio: React.FC = () => {
 				<ul>
 					<li>
 						<ProjectCard
-							name="Reactdex"
-							imgSrc={reactdexImg}
+							name="Project Pokédex"
+							imgSrc={projectPokedexImg}
 							link="https://project-pokedex.vercel.app/"
 							techs={['ReactJS', 'Node.js', 'MongoDB', 'PokéAPI']}
 						/>
