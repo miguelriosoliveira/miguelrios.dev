@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
-import me from '../assets/me.png';
+import me from '../assets/me.jpeg';
 
 export default createGlobalStyle`
 	* {
