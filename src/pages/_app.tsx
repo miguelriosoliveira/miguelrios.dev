@@ -1,5 +1,6 @@
 import { AppProps } from 'next/app';
 import Head from 'next/head';
+import Link from 'next/link';
 import { ThemeProvider } from 'styled-components';
 
 import Header from '../components/Header';
@@ -15,8 +16,8 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
 			</Head>
 
 			<Header>
-				<a href="/">Home</a>
-				<a href="/portfolio">Portfolio</a>
+				<Link href="/">Home</Link>
+				<Link href="/portfolio">Portfolio</Link>
 			</Header>
 
 			<Component {...pageProps} />

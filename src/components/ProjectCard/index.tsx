@@ -10,7 +10,7 @@ interface Props {
 }
 
 const ProjectCard: React.FC<Props> = ({ name, imgSrc, techs, link }) => {
-	const { data: dominantColor, loading, error } = useColor(imgSrc, 'hex', {
+	const { data: dominantColor } = useColor(imgSrc, 'hex', {
 		crossOrigin: 'Anonymous',
 		quality: 100,
 	});
