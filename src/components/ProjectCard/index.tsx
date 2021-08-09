@@ -22,7 +22,7 @@ const ProjectCard: React.FC<Props> = ({ name, imgSrc, techs, link }) => {
 
 				<div className="techs">
 					{techs.map(tech => (
-						<p>{tech}</p>
+						<p key={tech}>{tech}</p>
 					))}
 				</div>
 			</header>

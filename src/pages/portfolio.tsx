@@ -13,14 +13,14 @@ const PROJECTS = [
 	{
 		name: 'Project Netflix',
 		imgSrc: '/assets/project_netflix.png',
-		link: 'https://project-netflix.herokuapp.com',
-		techs: ['ReactJS', 'TypeScript', 'TMDb API'],
+		link: 'https://project-netflix.vercel.app',
+		techs: ['Next.js', 'TypeScript', 'TMDb API'],
 	},
 	{
 		name: 'github_explorer',
 		imgSrc: '/assets/github_explorer.png',
 		link: 'https://github-explorer-ts.vercel.app',
-		techs: ['ReactJS', 'TypeScript', 'GitHub API'],
+		techs: ['Next.js', 'TypeScript', 'GitHub API'],
 	},
 ];
 
