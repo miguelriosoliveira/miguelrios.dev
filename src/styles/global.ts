@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
-import me from '../assets/me.jpeg';
+import me from '../assets/me.webp';
 
 export default createGlobalStyle`
 	* {
