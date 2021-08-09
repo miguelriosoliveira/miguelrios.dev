@@ -1,8 +1,22 @@
 import { createGlobalStyle } from 'styled-components';
 
-import me from '../assets/me.webp';
-
 export default createGlobalStyle`
+	@font-face {
+		font-family: "Poppins";
+		src: url("/fonts/Poppins-Regular.ttf");
+		font-style: normal;
+		font-weight: 400;
+		font-display: swap;
+	}
+
+	@font-face {
+		font-family: "Poppins";
+		src: url("/fonts/Poppins-Bold.ttf");
+		font-style: normal;
+		font-weight: 700;
+		font-display: swap;
+	}
+
 	* {
 		margin: 0;
 		padding: 0;
@@ -17,7 +31,7 @@ export default createGlobalStyle`
 		padding: 16px 30px 30px 30px;
 
 		background: ${props => props.theme.colors.background};
-		background-image: url(${me});
+		background-image: url('/assets/me.webp');
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: cover;
