@@ -1,3 +1,4 @@
+import { NextPage } from 'next';
 import Head from 'next/head';
 
 import ProjectCard from '../components/ProjectCard';
@@ -24,7 +25,7 @@ const PROJECTS = [
 	},
 ];
 
-const Portfolio: React.FC = () => {
+const Portfolio: NextPage = () => {
 	return (
 		<>
 			<Head>

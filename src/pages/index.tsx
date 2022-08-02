@@ -1,3 +1,4 @@
+import { NextPage } from 'next';
 import { useEffect } from 'react';
 import {
 	FaLinkedin,
@@ -29,7 +30,7 @@ const LINKS = [
 	{ icon: FaEnvelope, to: 'mailto:miguelriosoliveira@gmail.com?subject=👨‍💻 Professional Contact' },
 ];
 
-const Home: React.FC = () => {
+const Home: NextPage = () => {
 	let typedElement = null;
 
 	useEffect(() => {
@@ -43,7 +44,7 @@ const Home: React.FC = () => {
 		return () => {
 			typed.destroy();
 		};
-	}, []);
+	}, [typedElement]);
 
 	return (
 		<Container>
@@ -57,8 +58,8 @@ const Home: React.FC = () => {
 				<h2>
 					<span>I&apos;m a </span>
 					<span
-						ref={el_ => {
-							typedElement = el_;
+						ref={element_ => {
+							typedElement = element_;
 						}}
 					/>
 				</h2>

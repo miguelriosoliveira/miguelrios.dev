@@ -7,7 +7,7 @@ import Header from '../components/Header';
 import GlobalStyle from '../styles/global';
 import theme from '../styles/theme';
 
-const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
+export default function MyApp({ Component, pageProps }: AppProps) {
 	return (
 		<ThemeProvider theme={theme}>
 			<Head>
@@ -25,6 +25,4 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
 			<GlobalStyle />
 		</ThemeProvider>
 	);
-};
-
-export default MyApp;
+}

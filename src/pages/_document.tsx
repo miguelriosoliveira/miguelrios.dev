@@ -9,17 +9,17 @@ import Document, {
 import { ServerStyleSheet } from 'styled-components';
 
 export default class MyDocument extends Document {
-	static async getInitialProps(ctx: DocumentContext): Promise<DocumentInitialProps> {
+	static async getInitialProps(context: DocumentContext): Promise<DocumentInitialProps> {
 		const sheet = new ServerStyleSheet();
-		const originalRenderPage = ctx.renderPage;
+		const originalRenderPage = context.renderPage;
 
 		try {
-			ctx.renderPage = () =>
+			context.renderPage = () =>
 				originalRenderPage({
 					enhanceApp: App => props => sheet.collectStyles(<App {...props} />),
 				});
 
-			const initialProps = await Document.getInitialProps(ctx);
+			const initialProps = await Document.getInitialProps(context);
 			return {
 				...initialProps,
 				styles: (
@@ -34,7 +34,7 @@ export default class MyDocument extends Document {
 		}
 	}
 
-	render(): JSX.Element {
+	render() {
 		return (
 			<Html lang="en">
 				<Head>

@@ -1,7 +1,5 @@
 import { StyledHeader } from './styles';
 
-const Header: React.FC = ({ children }) => {
+export default function Header({ children }) {
 	return <StyledHeader>{children}</StyledHeader>;
-};
-
-export default Header;
+}

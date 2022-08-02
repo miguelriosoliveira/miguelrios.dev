@@ -1,4 +1,5 @@
 import { useColor } from 'color-thief-react';
+import Image from 'next/image';
 
 import { Container } from './styles';
 
@@ -9,7 +10,7 @@ interface Props {
 	link: string;
 }
 
-const ProjectCard: React.FC<Props> = ({ name, imgSrc, techs, link }) => {
+export default function ProjectCard({ name, imgSrc, techs, link }: Props) {
 	const { data: dominantColor } = useColor(imgSrc, 'hex', {
 		crossOrigin: 'Anonymous',
 		quality: 100,
@@ -27,9 +28,9 @@ const ProjectCard: React.FC<Props> = ({ name, imgSrc, techs, link }) => {
 				</div>
 			</header>
 
-			<img src={imgSrc} alt={name} />
+			<div className="image-container">
+				<Image src={imgSrc} alt={name} layout="fill" objectFit="contain" />
+			</div>
 		</Container>
 	);
-};
-
-export default ProjectCard;
+}

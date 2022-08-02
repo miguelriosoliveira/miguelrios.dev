@@ -45,9 +45,10 @@ export const Container = styled.a<Props>`
 		}
 	}
 
-	img {
+	.image-container {
+		position: relative;
 		width: 100%;
-		border-radius: 10px;
+		height: 100%;
 		transform: rotate(15deg) translate(15%, 15%);
 	}
 `;
