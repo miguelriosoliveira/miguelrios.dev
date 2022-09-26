@@ -21,11 +21,11 @@
 		"typed.js": "^2.0.12"
 	},
 	"devDependencies": {
-		"@types/node": "^18.7.21",
+		"@types/node": "^18.7.23",
 		"@types/react": "^18.0.21",
 		"@types/styled-components": "^5.1.26",
-		"@typescript-eslint/eslint-plugin": "^5.38.0",
-		"@typescript-eslint/parser": "^5.38.0",
+		"@typescript-eslint/eslint-plugin": "^5.38.1",
+		"@typescript-eslint/parser": "^5.38.1",
 		"eslint": "^8.24.0",
 		"eslint-config-airbnb": "^19.0.4",
 		"eslint-config-next": "^12.3.1",
