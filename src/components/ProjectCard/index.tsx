@@ -1,5 +1,6 @@
-import { useColor } from 'color-thief-react';
+import ColorThief from 'colorthief';
 import Image from 'next/image';
+import { createRef, useState } from 'react';
 
 import { Container } from './styles';
 
@@ -11,10 +12,14 @@ interface Props {
 }
 
 export default function ProjectCard({ name, imgSrc, techs, link }: Props) {
-	const { data: dominantColor } = useColor(imgSrc, 'hex', {
-		crossOrigin: 'Anonymous',
-		quality: 100,
-	});
+	const [dominantColor, setDominantColor] = useState('');
+	const imgRef = createRef<HTMLImageElement>();
+
+	async function handleLoad() {
+		const colorThief = new ColorThief();
+		const [r, g, b] = await colorThief.getColor(imgRef.current, 100);
+		setDominantColor(`rgb(${r}, ${g}, ${b})`);
+	}
 
 	return (
 		<Container href={link} target="_blank" rel="noopener noreferrer" dominantColor={dominantColor}>
@@ -29,7 +34,14 @@ export default function ProjectCard({ name, imgSrc, techs, link }: Props) {
 			</header>
 
 			<div className="image-container">
-				<Image src={imgSrc} alt={name} layout="fill" objectFit="contain" />
+				<Image
+					ref={imgRef}
+					src={imgSrc}
+					alt={name}
+					layout="fill"
+					objectFit="contain"
+					onLoad={handleLoad}
+				/>
 			</div>
 		</Container>
 	);
