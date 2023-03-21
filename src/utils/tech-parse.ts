@@ -1,5 +1,6 @@
 export const TECHS_MAP = new Proxy(
 	{
+		'create-react-app': 'CRA',
 		express: 'Express',
 		'github-api': 'GitHub API',
 		mongodb: 'MongoDB',
