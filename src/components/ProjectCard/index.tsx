@@ -34,14 +34,7 @@ export default function ProjectCard({ name, imgSrc, techs, link }: Props) {
 			</header>
 
 			<div className="image-container">
-				<Image
-					ref={imgRef}
-					src={imgSrc}
-					alt={name}
-					layout="fill"
-					objectFit="contain"
-					onLoad={handleLoad}
-				/>
+				<Image fill ref={imgRef} src={imgSrc} alt={name} onLoad={handleLoad} />
 			</div>
 		</Container>
 	);

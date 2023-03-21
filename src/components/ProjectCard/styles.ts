@@ -50,5 +50,9 @@ export const Container = styled.a<Props>`
 		width: 100%;
 		height: 100%;
 		transform: rotate(15deg) translate(15%, 15%);
+
+		img {
+			object-fit: contain;
+		}
 	}
 `;
