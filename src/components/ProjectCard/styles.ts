@@ -14,7 +14,6 @@ export const Container = styled.a<Props>`
 	height: 100%;
 
 	header {
-		display: flex;
 		width: 100%;
 		justify-content: space-between;
 		padding: 15px 20px 0 20px;
@@ -29,7 +28,8 @@ export const Container = styled.a<Props>`
 
 		.techs {
 			display: flex;
-			align-items: center;
+			flex-wrap: wrap;
+			gap: 5px;
 
 			p {
 				font-size: 0.7rem;
@@ -37,10 +37,6 @@ export const Container = styled.a<Props>`
 				color: #aeafb2;
 				border-radius: 5px;
 				padding: 2px 8px;
-
-				& + p {
-					margin-left: 5px;
-				}
 			}
 		}
 	}

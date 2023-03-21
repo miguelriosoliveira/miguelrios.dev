@@ -5,13 +5,13 @@ import { createRef, useState } from 'react';
 import { Container } from './styles';
 
 interface Props {
-	name: string;
+	displayName: string;
 	imgSrc: string;
 	techs: string[];
 	link: string;
 }
 
-export default function ProjectCard({ name, imgSrc, techs, link }: Props) {
+export default function ProjectCard({ displayName, imgSrc, techs, link }: Props) {
 	const [dominantColor, setDominantColor] = useState('');
 	const imgRef = createRef<HTMLImageElement>();
 
@@ -24,7 +24,7 @@ export default function ProjectCard({ name, imgSrc, techs, link }: Props) {
 	return (
 		<Container href={link} target="_blank" rel="noopener noreferrer" dominantColor={dominantColor}>
 			<header>
-				<h2>{name}</h2>
+				<h2>{displayName}</h2>
 
 				<div className="techs">
 					{techs.map(tech => (
@@ -34,7 +34,7 @@ export default function ProjectCard({ name, imgSrc, techs, link }: Props) {
 			</header>
 
 			<div className="image-container">
-				<Image fill ref={imgRef} src={imgSrc} alt={name} onLoad={handleLoad} />
+				<Image fill ref={imgRef} src={imgSrc} alt={displayName} onLoad={handleLoad} />
 			</div>
 		</Container>
 	);
