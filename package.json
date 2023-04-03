@@ -22,16 +22,16 @@
 		"typed.js": "^2.0.132"
 	},
 	"devDependencies": {
-		"@types/node": "^18.15.10",
-		"@types/react": "^18.0.30",
+		"@types/node": "^18.15.11",
+		"@types/react": "^18.0.32",
 		"@types/styled-components": "^5.1.26",
 		"@typescript-eslint/eslint-plugin": "^5.57.0",
 		"@typescript-eslint/parser": "^5.57.0",
-		"eslint": "^8.36.0",
+		"eslint": "^8.37.0",
 		"eslint-config-airbnb": "^19.0.4",
 		"eslint-config-next": "^13.2.4",
 		"eslint-config-prettier": "^8.8.0",
-		"eslint-import-resolver-typescript": "^3.5.3",
+		"eslint-import-resolver-typescript": "^3.5.4",
 		"eslint-plugin-import": "^2.27.5",
 		"eslint-plugin-jsx-a11y": "^6.7.1",
 		"eslint-plugin-prettier": "^4.2.1",
@@ -40,6 +40,6 @@
 		"eslint-plugin-unicorn": "^46.0.0",
 		"husky": "^8.0.3",
 		"prettier": "^2.8.7",
-		"typescript": "^5.0.2"
+		"typescript": "^5.0.3"
 	}
 }
