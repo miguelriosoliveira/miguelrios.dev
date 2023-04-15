@@ -1,31 +1,66 @@
-import { NextPage } from 'next';
+import { GetStaticProps, NextPage } from 'next';
 import Head from 'next/head';
+import { Octokit } from 'octokit';
 
 import ProjectCard from '../components/ProjectCard';
 import { Container } from '../styles/pages/Portfolio';
+import { TECHS_MAP } from '../utils';
 
 const PROJECTS = [
 	{
-		name: 'Project Pokédex',
+		name: 'project-pokedex',
+		displayName: 'Project Pokédex',
 		imgSrc: '/assets/project_pokedex.png',
-		link: 'https://project-pokedex.vercel.app',
-		techs: ['ReactJS', 'Node.js', 'MongoDB', 'PokéAPI'],
 	},
 	{
-		name: 'Project Netflix',
+		name: 'project-netflix',
+		displayName: 'Project Netflix',
 		imgSrc: '/assets/project_netflix.png',
-		link: 'https://project-netflix.vercel.app',
-		techs: ['Next.js', 'TypeScript', 'TMDb API'],
 	},
 	{
-		name: 'github_explorer',
+		name: 'github-explorer',
+		displayName: 'github_explorer',
 		imgSrc: '/assets/github_explorer.png',
-		link: 'https://github-explorer-ts.vercel.app',
-		techs: ['Next.js', 'TypeScript', 'GitHub API'],
 	},
 ];
 
-const Portfolio: NextPage = () => {
+const { OCTOKIT_TOKEN } = process.env;
+const ONE_HOUR_IN_SECONDS = 1 * 60 * 60;
+
+interface Project {
+	name: string;
+	displayName: string;
+	imgSrc: string;
+	techs: string[];
+	link: string;
+}
+
+interface Props {
+	projects: Project[];
+}
+
+export const getStaticProps: GetStaticProps<Props> = async () => {
+	const octokit = new Octokit({ auth: OCTOKIT_TOKEN });
+
+	const repos = await Promise.all(
+		PROJECTS.map(project =>
+			octokit.rest.repos.get({ owner: 'miguelriosoliveira', repo: project.name }),
+		),
+	);
+
+	const projects = repos.map(({ data }, index) => ({
+		...PROJECTS[index],
+		link: data.homepage,
+		techs: data.topics.map(topic => TECHS_MAP[topic]),
+	}));
+
+	return {
+		props: { projects },
+		revalidate: ONE_HOUR_IN_SECONDS,
+	};
+};
+
+const Portfolio: NextPage = ({ projects }: Props) => {
 	return (
 		<>
 			<Head>
@@ -34,7 +69,7 @@ const Portfolio: NextPage = () => {
 
 			<Container>
 				<ul>
-					{PROJECTS.map(project => (
+					{projects.map(project => (
 						<li key={project.name}>
 							<ProjectCard {...project} />
 						</li>

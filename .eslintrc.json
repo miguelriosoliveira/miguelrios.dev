@@ -57,6 +57,7 @@
 		"react/prop-types": "off",
 		"react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
 		"react/jsx-indent": ["warn", "tab"],
+		"react/jsx-no-bind": "off",
 		"react/jsx-props-no-spreading": "off",
 		"react/react-in-jsx-scope": "off",
 		"react/require-default-props": "off",
@@ -64,32 +65,10 @@
 		"react-hooks/exhaustive-deps": "warn",
 		"react-hooks/rules-of-hooks": "error",
 
-		"unicorn/filename-case": [
-			"error",
-			{
-				"cases": {
-					"camelCase": true,
-					"pascalCase": true
-				}
-			}
-		],
+		"unicorn/filename-case": "off",
 		"unicorn/no-array-for-each": "off",
 		"unicorn/no-nested-ternary": "off",
 		"unicorn/no-null": "off",
-		"unicorn/prevent-abbreviations": [
-			"error",
-			{
-				"replacements": {
-					"ref": false,
-					"refs": false,
-					"prop": false,
-					"props": false
-				},
-				"allowList": {
-					"props": true,
-					"params": true
-				}
-			}
-		]
+		"unicorn/prevent-abbreviations": "off"
 	}
 }
