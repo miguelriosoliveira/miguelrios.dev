@@ -23,6 +23,7 @@
 	"rules": {
 		"camelcase": "off",
 		"no-case-declarations": "off",
+		"no-plusplus": "off",
 		"no-unused-vars": "off",
 
 		"@typescript-eslint/explicit-module-boundary-types": "off",
