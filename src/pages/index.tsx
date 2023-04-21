@@ -1,12 +1,12 @@
 import { NextPage } from 'next';
 import { useEffect } from 'react';
 import {
-	FaLinkedin,
-	FaGithub,
-	FaStackOverflow,
-	FaInstagram,
-	FaTwitter,
 	FaEnvelope,
+	FaGithub,
+	FaInstagram,
+	FaLinkedin,
+	FaStackOverflow,
+	FaTwitter,
 } from 'react-icons/fa';
 import Typed from 'typed.js';
 
@@ -22,7 +22,7 @@ const ROLES = [
 ];
 
 const LINKS = [
-	{ icon: FaLinkedin, to: 'https://www.linkedin.com/in/miguelriosoliveira/?locale=en_US' },
+	{ icon: FaLinkedin, to: 'https://www.linkedin.com/in/miguelriosoliveira' },
 	{ icon: FaGithub, to: 'https://github.com/miguelriosoliveira' },
 	{ icon: FaStackOverflow, to: 'https://stackoverflow.com/users/4916416/miguel-rios' },
 	{ icon: FaInstagram, to: 'https://www.instagram.com/miguelrisos' },
