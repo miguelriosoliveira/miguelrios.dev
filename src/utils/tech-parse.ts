@@ -10,6 +10,7 @@ export const TECHS_MAP = new Proxy(
 		pokeapi: 'PokéAPI',
 		react: 'ReactJS',
 		'tmdb-api': 'TMDB API',
+		tailwindcss: 'Tailwind CSS',
 		typescript: 'TypeScript',
 	},
 	{
