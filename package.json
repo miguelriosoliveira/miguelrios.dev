@@ -12,23 +12,23 @@
 		"prepare": "husky install"
 	},
 	"dependencies": {
-		"next": "13.4.2",
-		"octokit": "^2.0.14",
+		"next": "13.4.4",
+		"octokit": "^2.0.19",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
-		"react-icons": "^4.8.0",
-		"styled-components": "^5.3.10",
+		"react-icons": "^4.9.0",
+		"styled-components": "^5.3.11",
 		"typed.js": "^2.0.132"
 	},
 	"devDependencies": {
-		"@types/node": "^20.1.7",
-		"@types/react": "^18.2.6",
+		"@types/node": "^20.2.5",
+		"@types/react": "^18.2.8",
 		"@types/styled-components": "^5.1.26",
-		"@typescript-eslint/eslint-plugin": "^5.59.6",
-		"@typescript-eslint/parser": "^5.59.6",
-		"eslint": "^8.40.0",
+		"@typescript-eslint/eslint-plugin": "^5.59.9",
+		"@typescript-eslint/parser": "^5.59.9",
+		"eslint": "^8.42.0",
 		"eslint-config-airbnb": "^19.0.4",
-		"eslint-config-next": "^13.4.2",
+		"eslint-config-next": "^13.4.4",
 		"eslint-config-prettier": "^8.8.0",
 		"eslint-import-resolver-typescript": "^3.5.5",
 		"eslint-plugin-import": "^2.27.5",
@@ -39,6 +39,6 @@
 		"eslint-plugin-unicorn": "^47.0.0",
 		"husky": "^8.0.3",
 		"prettier": "^2.8.8",
-		"typescript": "^5.0.4"
+		"typescript": "^5.1.3"
 	}
 }
