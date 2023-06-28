@@ -1,8 +1,8 @@
 import { GetStaticProps, NextPage } from 'next';
 import Head from 'next/head';
-import { Octokit } from 'octokit';
 
 import ProjectCard from '../components/ProjectCard';
+import { githubApi } from '../services';
 import { Container } from '../styles/pages/Portfolio';
 import { TECHS_MAP } from '../utils';
 
@@ -24,7 +24,6 @@ const PROJECTS = [
 	},
 ];
 
-const { OCTOKIT_TOKEN } = process.env;
 const ONE_HOUR_IN_SECONDS = 1 * 60 * 60;
 
 interface Project {
@@ -40,18 +39,14 @@ interface Props {
 }
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
-	const octokit = new Octokit({ auth: OCTOKIT_TOKEN });
-
 	const repos = await Promise.all(
-		PROJECTS.map(project =>
-			octokit.rest.repos.get({ owner: 'miguelriosoliveira', repo: project.name }),
-		),
+		PROJECTS.map(project => githubApi.getRepoDetails('miguelriosoliveira', project.name)),
 	);
 
-	const projects = repos.map(({ data }, index) => ({
+	const projects = repos.map((repo, index) => ({
 		...PROJECTS[index],
-		link: data.homepage,
-		techs: data.topics.map(topic => TECHS_MAP[topic]),
+		link: repo.homepage,
+		techs: repo.topics.map(topic => TECHS_MAP[topic]),
 	}));
 
 	return {
