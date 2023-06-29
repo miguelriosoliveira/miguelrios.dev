@@ -1,26 +1,14 @@
-import Image from 'next/image';
-import { createRef, useState } from 'react';
-
-import { Container } from './styles';
-
-interface Props {
-	displayName: string;
-	imgSrc: string;
-	techs: string[];
-	link: string;
-}
-
-function getAverageColorFromImage(img: HTMLImageElement) {
+export function getAverageColorFromImage(img: HTMLImageElement) {
 	// Create a canvas element
 	const canvas = document.createElement('canvas');
-	const ctx = canvas.getContext('2d');
+	const ctx = canvas.getContext('2d')!;
 
 	// Set the canvas width and height to match the image
-	canvas.width = img.width;
-	canvas.height = img.height;
+	canvas.width = img.naturalWidth;
+	canvas.height = img.naturalHeight;
 
 	// Draw the image onto the canvas
-	ctx.drawImage(img, 0, 0, img.width, img.height);
+	ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
 
 	// Get the image data from the canvas
 	const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
@@ -29,7 +17,7 @@ function getAverageColorFromImage(img: HTMLImageElement) {
 	const pixels = imageData.data;
 
 	// Create an object to store the color counts
-	const colorCounts = {};
+	const colorCounts: { [k: string]: number } = {};
 
 	// Loop through each pixel
 	for (let i = 0; i < pixels.length; i += 4) {
@@ -67,32 +55,4 @@ function getAverageColorFromImage(img: HTMLImageElement) {
 	const avgB = Math.round(totalB / totalPixels);
 
 	return [avgR, avgG, avgB];
-}
-
-export default function ProjectCard({ displayName, imgSrc, techs, link }: Props) {
-	const [dominantColor, setDominantColor] = useState('');
-	const imgRef = createRef<HTMLImageElement>();
-
-	async function handleLoad() {
-		const [r, g, b] = getAverageColorFromImage(imgRef.current);
-		setDominantColor(`rgb(${r}, ${g}, ${b})`);
-	}
-
-	return (
-		<Container href={link} target="_blank" rel="noopener noreferrer" dominantColor={dominantColor}>
-			<header>
-				<h2>{displayName}</h2>
-
-				<div className="techs">
-					{techs.map(tech => (
-						<p key={tech}>{tech}</p>
-					))}
-				</div>
-			</header>
-
-			<div className="image-container">
-				<Image fill ref={imgRef} src={imgSrc} alt={displayName} onLoad={handleLoad} />
-			</div>
-		</Container>
-	);
 }

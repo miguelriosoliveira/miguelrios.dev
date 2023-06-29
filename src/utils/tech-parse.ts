@@ -14,6 +14,6 @@ export const TECHS_MAP = new Proxy(
 		typescript: 'TypeScript',
 	},
 	{
-		get: (target, key) => target[key] || key,
+		get: (target: { [k: string]: string }, key: string) => target[key] || key,
 	},
 );
