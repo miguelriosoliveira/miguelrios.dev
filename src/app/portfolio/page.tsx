@@ -11,7 +11,7 @@ export const revalidate = 60;
 
 const PROJECTS = [
 	{
-		name: 'project-pokedex',
+		name: 'project-pokedex-v2',
 		displayName: 'Project Pokédex',
 		imgSrc: '/assets/project_pokedex.png',
 	},
