@@ -12,6 +12,7 @@ export const TECHS_MAP = new Proxy(
 		'tmdb-api': 'TMDB API',
 		tailwindcss: 'Tailwind CSS',
 		typescript: 'TypeScript',
+		vite: 'Vite',
 	},
 	{
 		get: (target: { [k: string]: string }, key: string) => target[key] || key,
