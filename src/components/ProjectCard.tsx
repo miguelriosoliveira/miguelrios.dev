@@ -43,7 +43,7 @@ export function ProjectCard({ displayName, imgSrc, techs, link }: Props) {
 
 				<div className="flex flex-wrap gap-1">
 					{techs.map(({ slug, displayName }) => (
-						<Image
+						<img
 							key={slug}
 							alt="Static Badge"
 							src={`https://img.shields.io/badge/${displayName}-gray?style=flat&logo=${slug}`}
