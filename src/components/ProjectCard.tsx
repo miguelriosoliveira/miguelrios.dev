@@ -46,7 +46,7 @@ export function ProjectCard({ displayName, imgSrc, techs, link }: Props) {
 						<Image
 							key={slug}
 							alt="Static Badge"
-							src={`https://img.shields.io/badge/${displayName}-gray?style=flat&logo${slug}`}
+							src={`https://img.shields.io/badge/${displayName}-gray?style=flat&logo=${slug}`}
 						/>
 					))}
 				</div>
