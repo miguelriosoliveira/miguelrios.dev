@@ -22,7 +22,7 @@ export const TECHS_MAP = new Proxy(
 			displayName: 'MongoDB',
 		},
 		monorepo: {
-			slug: 'monorepo',
+			slug: 'git',
 			displayName: 'Monorepo',
 		},
 		nextjs: {
