@@ -1,13 +1,18 @@
 'use client';
 
 import Image from 'next/image';
-import { useRef, useState } from 'react';
+import { Fragment, useRef, useState } from 'react';
 import { getAverageColorFromImage } from '@/utils';
+
+interface Tech {
+	slug: string;
+	displayName: string;
+}
 
 interface Props {
 	displayName: string;
 	imgSrc: string;
-	techs: string[];
+	techs: Tech[];
 	link: string;
 }
 
@@ -37,10 +42,12 @@ export function ProjectCard({ displayName, imgSrc, techs, link }: Props) {
 				</h2>
 
 				<div className="flex flex-wrap gap-1">
-					{techs.map(tech => (
-						<p key={tech} className="text-xs bg-gray-500 text-gray-300 rounded-md py-1 px-2">
-							{tech}
-						</p>
+					{techs.map(({ slug, displayName }) => (
+						<Image
+							key={slug}
+							alt="Static Badge"
+							src={`https://img.shields.io/badge/${displayName}-gray?style=flat&logo${slug}`}
+						/>
 					))}
 				</div>
 			</header>

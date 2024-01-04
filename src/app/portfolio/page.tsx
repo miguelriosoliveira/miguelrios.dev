@@ -36,7 +36,7 @@ export default async function Portfolio() {
 		projects = repos.map((repo, index) => ({
 			...PROJECTS[index],
 			link: repo.homepage,
-			techs: repo.topics.map(topic => TECHS_MAP[topic]),
+			techs: repo.topics.map(topic => ({ slug: topic, displayName: TECHS_MAP[topic] })),
 		}));
 	} catch (error) {
 		projects = PROJECTS.map((project, index) => ({
