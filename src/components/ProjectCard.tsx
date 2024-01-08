@@ -1,8 +1,8 @@
 'use client';
 
-import Image from 'next/image';
-import { Fragment, useRef, useState } from 'react';
 import { getAverageColorFromImage } from '@/utils';
+import Image from 'next/image';
+import { useRef, useState } from 'react';
 
 interface Tech {
 	slug: string;
@@ -43,9 +43,10 @@ export function ProjectCard({ displayName, imgSrc, techs, link }: Props) {
 
 				<div className="flex flex-wrap gap-1">
 					{techs.map(({ slug, displayName }) => (
+						// eslint-disable-next-line @next/next/no-img-element
 						<img
 							key={slug}
-							alt="Static Badge"
+							alt={`${displayName} logo`}
 							src={`https://img.shields.io/badge/${displayName}-gray?style=flat&logo=${slug}`}
 						/>
 					))}
