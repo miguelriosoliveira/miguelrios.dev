@@ -12,7 +12,7 @@ const ROLES = [
 ];
 
 export function DynamicRoles() {
-	let typedElement = useRef(null);
+	const typedElement = useRef(null);
 
 	useEffect(() => {
 		const typed = new Typed(typedElement.current, {

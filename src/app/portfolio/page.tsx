@@ -38,7 +38,7 @@ export default async function Portfolio() {
 			link: repo.homepage,
 			techs: repo.topics.map(topic => TECHS_MAP[topic]),
 		}));
-	} catch (error) {
+	} catch {
 		projects = PROJECTS.map((project, index) => ({
 			...PROJECTS[index],
 			link: `https://github.com/miguelriosoliveira/${project.name}`,

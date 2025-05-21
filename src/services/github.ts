@@ -1,6 +1,4 @@
 import axios from 'axios';
-import fs from 'node:fs/promises';
-import path from 'node:path';
 
 interface Repository {
 	name: string;

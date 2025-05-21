@@ -1,5 +1,4 @@
 import { DynamicRoles, IconLink } from '@/components';
-import { Metadata } from 'next';
 import {
 	FaEnvelope,
 	FaGithub,
