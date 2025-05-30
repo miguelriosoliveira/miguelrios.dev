@@ -1,7 +1,5 @@
 {
-	"name": "miguelriosoliveira.github.io",
-	"version": "0.1.0",
-	"private": true,
+	"name": "miguelrios.dev",
 	"homepage": "https://miguelrios.dev",
 	"packageManager": "pnpm@10.11.0",
 	"scripts": {
