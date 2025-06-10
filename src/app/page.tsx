@@ -1,19 +1,21 @@
 import { DynamicRoles, IconLink } from '@/components';
 import {
+	FaBluesky,
 	FaEnvelope,
 	FaGithub,
 	FaInstagram,
 	FaLinkedin,
 	FaStackOverflow,
-	FaTwitter,
-} from 'react-icons/fa';
+	FaXTwitter,
+} from 'react-icons/fa6';
 
 const LINKS = [
 	{ icon: FaLinkedin, to: 'https://www.linkedin.com/in/miguelriosoliveira' },
 	{ icon: FaGithub, to: 'https://github.com/miguelriosoliveira' },
 	{ icon: FaStackOverflow, to: 'https://stackoverflow.com/users/4916416/miguel-rios' },
 	{ icon: FaInstagram, to: 'https://www.instagram.com/miguelrisos' },
-	{ icon: FaTwitter, to: 'https://twitter.com/MiguelRisos' },
+	{ icon: FaBluesky, to: 'https://bsky.app/profile/miguelrisos.bsky.social' },
+	{ icon: FaXTwitter, to: 'https://x.com/MiguelRisos' },
 	{ icon: FaEnvelope, to: 'mailto:miguelriosoliveira@gmail.com?subject=👨‍💻 Professional Contact' },
 ];
 

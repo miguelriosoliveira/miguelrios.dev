@@ -20,7 +20,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 			<body
 				className={classNames(
 					poppins.className,
-					'h-screen text-gray-300 p-7 pt-4 bg-[url("/assets/me.webp")] bg-cover flex flex-col',
+					'h-screen text-gray-300 p-7 pt-4 bg-[url(/assets/me.webp)] bg-cover flex flex-col',
 				)}
 			>
 				<Header>
