@@ -1,7 +1,7 @@
 {
 	"name": "miguelrios.dev",
 	"homepage": "https://miguelrios.dev",
-	"packageManager": "pnpm@10.12.1",
+	"packageManager": "pnpm@10.12.2",
 	"scripts": {
 		"dev": "next dev",
 		"build": "next build",
