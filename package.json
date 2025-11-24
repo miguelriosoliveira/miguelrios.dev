@@ -1,7 +1,7 @@
 {
   "name": "miguelrios.dev",
   "homepage": "https://miguelrios.dev",
-  "packageManager": "pnpm@10.22.0",
+  "packageManager": "pnpm@10.23.0",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -21,7 +21,7 @@
   "devDependencies": {
     "@tailwindcss/postcss": "^4.1.17",
     "@types/node": "^24.10.1",
-    "@types/react": "^19.2.5",
+    "@types/react": "^19.2.6",
     "@types/react-dom": "^19.2.3",
     "eslint": "^9.39.1",
     "eslint-config-next": "^16.0.3",
