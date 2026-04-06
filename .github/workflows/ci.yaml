@@ -14,7 +14,7 @@ jobs:
       security-events: write
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v6
 
       - name: Install pnpm
         uses: pnpm/action-setup@v5
@@ -39,4 +39,4 @@ jobs:
         run: pnpm lint
 
       - name: Add, commit and push changed files
-        uses: stefanzweifel/git-auto-commit-action@v4
+        uses: stefanzweifel/git-auto-commit-action@v7
