@@ -10,11 +10,14 @@ jobs:
   ci:
     runs-on: ubuntu-latest
     permissions:
-      contents: read
+      contents: write
       security-events: write
     steps:
       - name: Checkout code
         uses: actions/checkout@v6
+        with:
+          ref: ${{ github.head_ref || github.ref }}
+          persist-credentials: true
 
       - name: Install pnpm
         uses: pnpm/action-setup@v6
@@ -39,4 +42,9 @@ jobs:
         run: pnpm lint
 
       - name: Add, commit and push changed files
+        if: ${{ github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository }}
         uses: stefanzweifel/git-auto-commit-action@v7
+        with:
+          commit_message: 'chore(ci): apply lint auto-fixes'
+          commit_user_name: github-actions[bot]
+          commit_user_email: github-actions[bot]@users.noreply.github.com
