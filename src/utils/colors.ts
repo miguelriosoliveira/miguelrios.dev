@@ -1,7 +1,10 @@
 export function getAverageColorFromImage(img: HTMLImageElement) {
 	// Create a canvas element
 	const canvas = document.createElement('canvas');
-	const ctx = canvas.getContext('2d')!;
+	const ctx = canvas.getContext('2d');
+	if (!ctx) {
+		throw new Error('2d canvas context is unavailable');
+	}
 
 	// Set the canvas width and height to match the image
 	canvas.width = img.naturalWidth;

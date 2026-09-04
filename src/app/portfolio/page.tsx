@@ -1,7 +1,7 @@
+import type { Metadata } from 'next';
 import { ProjectCard } from '@/components';
 import { githubApi } from '@/services';
 import { TECHS_MAP } from '@/utils';
-import { Metadata } from 'next';
 
 export const metadata: Metadata = {
 	title: 'Portfolio',
@@ -25,10 +25,15 @@ const PROJECTS = [
 		displayName: 'github_explorer',
 		imgSrc: '/assets/github_explorer.png',
 	},
-];
+] as const;
+
+type PortfolioProject = (typeof PROJECTS)[number] & {
+	link: string;
+	techs: Array<(typeof TECHS_MAP)[string]>;
+};
 
 export default async function Portfolio() {
-	let projects;
+	let projects: PortfolioProject[];
 	try {
 		const repos = await Promise.all(
 			PROJECTS.map(project => githubApi.getRepoDetails('miguelriosoliveira', project.name)),

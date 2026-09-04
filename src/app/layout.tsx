@@ -1,8 +1,8 @@
-import { Poppins } from 'next/font/google';
 import classNames from 'classnames';
-import { Header } from '@/components';
+import type { Metadata } from 'next';
+import { Poppins } from 'next/font/google';
 import Link from 'next/link';
-import { Metadata } from 'next';
+import { Header } from '@/components';
 import './globals.css';
 
 const poppins = Poppins({ weight: ['400', '700'], subsets: ['latin'] });

@@ -4,17 +4,21 @@ import { useEffect, useRef } from 'react';
 import Typed from 'typed.js';
 
 const ROLES = [
-	'developer 👨‍💻',
-	'dependent on inspiration 👓',
-	'gaming enthusiast 🎮',
-	'code maker 💻',
-	'coffee lover ☕',
+	'a developer 👨‍💻',
+	'thriving on inspiration ✨',
+	'a gaming enthusiast 🎮',
+	'a code maker 💻',
+	'a coffee lover ☕',
 ];
 
 export function DynamicRoles() {
-	const typedElement = useRef(null);
+	const typedElement = useRef<HTMLSpanElement>(null);
 
 	useEffect(() => {
+		if (!typedElement.current) {
+			return;
+		}
+
 		const typed = new Typed(typedElement.current, {
 			strings: ROLES,
 			typeSpeed: 50,
@@ -25,7 +29,7 @@ export function DynamicRoles() {
 		return () => {
 			typed.destroy();
 		};
-	}, [typedElement]);
+	}, []);
 
 	return <span ref={typedElement} />;
 }

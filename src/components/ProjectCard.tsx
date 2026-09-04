@@ -1,8 +1,8 @@
 'use client';
 
-import { getAverageColorFromImage } from '@/utils';
 import Image from 'next/image';
 import { useRef, useState } from 'react';
+import { getAverageColorFromImage } from '@/utils';
 
 interface Tech {
 	slug: string;
@@ -43,7 +43,7 @@ export function ProjectCard({ displayName, imgSrc, techs, link }: Props) {
 
 				<div className="flex flex-wrap gap-1">
 					{techs.map(({ slug, displayName }) => (
-						// eslint-disable-next-line @next/next/no-img-element
+						// biome-ignore lint/performance/noImgElement: shields.io badges are remote SVGs, not Next-optimized assets
 						<img
 							key={slug}
 							alt={`${displayName} logo`}

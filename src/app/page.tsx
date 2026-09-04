@@ -1,4 +1,3 @@
-import { DynamicRoles, IconLink } from '@/components';
 import {
 	FaBluesky,
 	FaEnvelope,
@@ -7,6 +6,7 @@ import {
 	FaLinkedin,
 	FaXTwitter,
 } from 'react-icons/fa6';
+import { DynamicRoles, IconLink } from '@/components';
 
 const LINKS = [
 	{ icon: FaLinkedin, to: 'https://www.linkedin.com/in/miguelriosoliveira' },
@@ -23,7 +23,7 @@ export default function Home() {
 			<section className="text-center flex-1">
 				<h1 className="text-5xl mt-10 font-bold">Miguel Rios</h1>
 				<h2 className="text-2xl font-normal tracking-wide">
-					<span>I&apos;m a </span>
+					<span>I&apos;m </span>
 					<DynamicRoles />
 				</h2>
 			</section>
