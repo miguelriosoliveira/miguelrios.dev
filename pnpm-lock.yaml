@@ -134,6 +134,9 @@ importers:
       '@biomejs/biome':
         specifier: 2.5.12
         version: 2.5.12
+      '@miguelriosoliveira/shared-configs':
+        specifier: github:miguelriosoliveira/shared-configs
+        version: https://codeload.github.com/miguelriosoliveira/shared-configs/tar.gz/71e61bb90c505bcac5411999090cf734cb239251
       '@tailwindcss/postcss':
         specifier: ^4.3.3
         version: 4.3.3
@@ -469,6 +472,10 @@ packages:
 
   '@jridgewell/trace-mapping@0.3.31':
     resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
+
+  '@miguelriosoliveira/shared-configs@https://codeload.github.com/miguelriosoliveira/shared-configs/tar.gz/71e61bb90c505bcac5411999090cf734cb239251':
+    resolution: {gitHosted: true, integrity: sha512-dVUwurQnLpNxN6kbpBp28Y2sQydDOWqFHfTjdMqFd5W+/6XEufVDlGYcJWEkVSV01ExnNwT/k50pDaU9G6XmnA==, tarball: https://codeload.github.com/miguelriosoliveira/shared-configs/tar.gz/71e61bb90c505bcac5411999090cf734cb239251}
+    version: 0.1.0
 
   '@next/env@16.3.4':
     resolution: {integrity: sha512-cjWZnUUa6jZq2kFaNe/ZyJdZonOZ/QoN0Zka2nz/FLOrfx14pQuM9c5RaSVkWMqgdt4ksgPAMWPyHSs/CyV48Q==}
@@ -1422,6 +1429,8 @@ snapshots:
     dependencies:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.6.0
+
+  '@miguelriosoliveira/shared-configs@https://codeload.github.com/miguelriosoliveira/shared-configs/tar.gz/71e61bb90c505bcac5411999090cf734cb239251': {}
 
   '@next/env@16.3.4': {}
 

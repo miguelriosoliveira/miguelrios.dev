@@ -1,23 +1,4 @@
 {
 	"$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
-	"vcs": {
-		"enabled": true,
-		"clientKind": "git",
-		"useIgnoreFile": true
-	},
-	"formatter": {
-		"lineWidth": 100,
-		"useEditorconfig": true
-	},
-	"javascript": {
-		"formatter": {
-			"quoteStyle": "single",
-			"arrowParentheses": "asNeeded"
-		}
-	},
-	"css": {
-		"parser": {
-			"tailwindDirectives": true
-		}
-	}
+	"extends": ["@miguelriosoliveira/shared-configs/biome"]
 }
