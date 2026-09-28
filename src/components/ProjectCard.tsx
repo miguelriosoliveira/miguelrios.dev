@@ -43,7 +43,6 @@ export function ProjectCard({ displayName, imgSrc, techs, link }: Props) {
 
 				<div className="flex flex-wrap gap-1">
 					{techs.map(({ slug, displayName }) => (
-						// biome-ignore lint/performance/noImgElement: shields.io badges are remote SVGs, not Next-optimized assets
 						<img
 							key={slug}
 							alt={`${displayName} logo`}
