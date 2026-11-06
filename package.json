@@ -1,7 +1,7 @@
 {
 	"name": "miguelrios.dev",
 	"homepage": "https://miguelrios.dev",
-	"packageManager": "pnpm@12.16.1",
+	"packageManager": "pnpm@12.18.0",
 	"engines": {
 		"node": "24.22.1"
 	},
@@ -16,22 +16,22 @@
 	"dependencies": {
 		"axios": "^1.21.0",
 		"classnames": "^2.5.1",
-		"next": "16.4.3",
+		"next": "16.4.5",
 		"react": "19.3.1",
 		"react-dom": "19.3.1",
 		"react-icons": "^5.7.0",
 		"typed.js": "^3.0.0"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "2.6.4",
+		"@biomejs/biome": "2.6.5",
 		"@miguelriosoliveira/shared-configs": "github:miguelriosoliveira/shared-configs",
-		"@tailwindcss/postcss": "^4.3.3",
+		"@tailwindcss/postcss": "^4.3.4",
 		"@types/node": "^26.6.6",
 		"@types/react": "^19.3.0",
 		"@types/react-dom": "^19.3.0",
 		"husky": "^9.1.7",
 		"postcss": "^8.5.32",
-		"tailwindcss": "^4.3.3",
+		"tailwindcss": "^4.3.4",
 		"typescript": "^7.0.2"
 	}
 }
